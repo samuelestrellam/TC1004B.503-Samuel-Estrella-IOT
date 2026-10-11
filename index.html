@@ -1,15 +1,144 @@
+```html
 <!DOCTYPE html>
 <html lang="es">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis páginas web</title>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Samuel Estrella | Labs</title>
+  <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
 </head>
 <body>
-    <h1>Mis páginas web</h1>
-    <ul>
-        <li><a href="./Landing%20Page/index.html">Landing Page</a></li>
-        <li><a href="./Artist%20Page/index.html">Artist Page</a></li>
-    </ul>
+
+  <header class="site-header">
+    <div class="container header-inner">
+      <a class="brand" href="#inicio">
+        <span class="brand-mark">SE</span>
+        <span class="brand-name">Samuel Estrella</span>
+      </a>
+      <nav class="main-nav">
+        <a href="#labs">Labs</a>
+        <a href="#sobre-mi">Sobre mí</a>
+        <a href="#contacto">Contacto</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="inicio">
+
+    <div class="container">
+      <nav class="crumbs">
+        <ol>
+          <li><a href="#inicio">Samuel Estrella</a></li>
+          <li><a href="#labs" aria-current="page">Labs</a></li>
+        </ol>
+      </nav>
+    </div>
+
+    <section class="hero container">
+      <div>
+        <h1>Samuel Estrella Martínez</h1>
+        <p class="role">Estudiante de Ingeniería en Tecnologías Computacionales<br>Tec de Monterrey, Campus Querétaro</p>
+        <p class="lead">Técnico en Programación. Aquí subo los labs que voy haciendo en la carrera, con lo que usé y cómo quedaron.</p>
+        <div class="actions">
+          <a class="btn btn-primary" href="#labs">Ver labs</a>
+          <a class="btn btn-secondary" href="https://github.com/samuelestrellam" target="_blank">GitHub</a>
+        </div>
+      </div>
+
+      <dl class="facts">
+        <div><dt>Semestre</dt><dd>Tercero</dd></div>
+        <div><dt>Ubicación</dt><dd>Querétaro, México</dd></div>
+        <div><dt>Idiomas</dt><dd>Español, inglés</dd></div>
+        <div><dt>Labs publicados</dt><dd>1</dd></div>
+      </dl>
+    </section>
+
+    <section class="section" id="labs">
+      <div class="container">
+        <div class="section-head">
+          <h2>Labs</h2>
+        </div>
+
+        <ol class="lab-list">
+          <li class="lab">
+            <span class="lab-num">01</span>
+
+            <div class="lab-body">
+              <h3>
+                <a href="../Artist%20Page/index.html">Artist Fan Page</a>
+              </h3>
+              <p>Página de fans de un artista hecha con HTML y CSS.</p>
+              <ul class="tags">
+                <li>HTML</li>
+                <li>CSS</li>
+                <li>Responsive</li>
+              </ul>
+            </div>
+
+            <span class="status status-done">Entregado</span>
+
+            <a class="lab-link" href="../Artist%20Page/index.html">Abrir</a>
+          </li>
+
+          <li class="lab lab-pending">
+            <span class="lab-num">02</span>
+            <div class="lab-body">
+              <h3>Próximo lab</h3>
+              <p>Todavía no está listo.</p>
+            </div>
+            <span class="status">En proceso</span>
+          </li>
+        </ol>
+      </div>
+    </section>
+
+    <section class="section section-alt" id="sobre-mi">
+      <div class="container two-col">
+        <h2>Sobre mí</h2>
+        <div>
+          <p>Soy Técnico en Programación y estoy estudiando Ingeniería en Tecnologías Computacionales en el Tec de Monterrey. Me gusta programar y hacer proyectos que sí se usen.</p>
+          <dl class="timeline">
+            <div>
+              <dt>En curso</dt>
+              <dd><strong>Ingeniería en Tecnologías Computacionales</strong><br>Tec de Monterrey, Campus Querétaro</dd>
+            </div>
+            <div>
+              <dt>Terminado</dt>
+              <dd><strong>Técnico en Programación</strong></dd>
+            </div>
+          </dl>
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="contacto">
+      <div class="container two-col">
+        <h2>Contacto</h2>
+        <ul class="contact">
+          <li>
+            <span>Correo</span>
+            <a href="mailto:estrellasamuel12@gmail.com">estrellasamuel12@gmail.com</a>
+          </li>
+          <li>
+            <span>GitHub</span>
+            <a href="https://github.com/samuelestrellam" target="_blank">github.com/samuelestrellam</a>
+          </li>
+          <li>
+            <span>LinkedIn</span>
+            <a href="https://www.linkedin.com/in/samuel-estrella-1631b2422" target="_blank">linkedin.com/in/samuel-estrella</a>
+          </li>
+        </ul>
+      </div>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <span>© 2026 Samuel Estrella Martínez</span>
+    </div>
+  </footer>
+
 </body>
 </html>

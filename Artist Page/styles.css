@@ -1,0 +1,512 @@
+:root {
+  --negro: #0B0B0C;
+  --tarjeta: #121214;
+  --dorado: #C9A54C;
+  --blanco: #FFFFFF;
+  --texto: #CFCABE;
+  --gris: #B9B4A8;
+  --gris-oscuro: #9C978C;
+  --linea: #3A3A3C;
+  --serif: Georgia, "Times New Roman", serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  margin: 0;
+  background-color: var(--negro);
+  color: #EDEAE3;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+h1, h2, h3 {
+  font-family: var(--serif);
+  font-weight: normal;
+}
+
+.contenedor {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.angosto {
+  max-width: 900px;
+}
+
+.etiqueta {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 3px;
+  color: var(--dorado);
+}
+
+/* menu */
+.menu {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background-color: rgba(11, 11, 12, 0.92);
+  border-bottom: 1px solid rgba(201, 165, 76, 0.35);
+  padding: 16px 24px;
+  text-align: center;
+}
+
+.menu-sitio {
+  font-size: 14px;
+  letter-spacing: 1px;
+}
+
+.menu-sitio a {
+  color: var(--blanco);
+  text-decoration: none;
+  margin: 0 14px;
+}
+
+.menu-sitio span {
+  color: #4A4A4A;
+}
+
+.menu-sitio .activo {
+  color: var(--dorado);
+}
+
+.menu-pagina {
+  margin-top: 10px;
+  font-size: 13px;
+  letter-spacing: 1px;
+}
+
+.menu-pagina a {
+  color: var(--gris-oscuro);
+  text-decoration: none;
+  margin: 0 12px;
+  transition: color .2s;
+}
+
+.menu a:hover {
+  color: var(--dorado);
+}
+
+/* videos y capas de fondo */
+.video-fondo {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: 0;
+}
+
+.capa {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+}
+
+.capa-portada {
+  background: linear-gradient(90deg, rgba(11, 11, 12, 0.94) 0%, rgba(11, 11, 12, 0.78) 50%, rgba(11, 11, 12, 0.55) 100%);
+}
+
+.capa-abajo {
+  top: auto;
+  bottom: 0;
+  height: 160px;
+  background: linear-gradient(rgba(11, 11, 12, 0), var(--negro));
+}
+
+.capa-oscura {
+  background-color: rgba(11, 11, 12, 0.88);
+}
+
+.encima {
+  position: relative;
+  z-index: 2;
+}
+
+/* portada */
+.portada {
+  position: relative;
+  overflow: hidden;
+  min-height: 90vh;
+  display: flex;
+  align-items: center;
+  padding: 80px 24px;
+}
+
+.portada-contenido {
+  position: relative;
+  z-index: 2;
+  max-width: 1100px;
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 56px;
+}
+
+.portada-texto {
+  flex: 1 1 440px;
+}
+
+.portada h1 {
+  margin: 18px 0 0;
+  font-size: 76px;
+  line-height: 1;
+  color: var(--blanco);
+}
+
+.linea {
+  width: 80px;
+  height: 1px;
+  background-color: var(--dorado);
+  margin: 28px 0;
+}
+
+.frase {
+  margin: 0;
+  font-family: var(--serif);
+  font-style: italic;
+  font-size: 22px;
+  color: #D9D4C7;
+}
+
+.intro {
+  max-width: 500px;
+  margin: 20px 0 0;
+  font-size: 17px;
+  line-height: 1.75;
+  color: var(--gris);
+}
+
+.boton {
+  display: inline-block;
+  margin-top: 36px;
+  padding: 14px 34px;
+  border: 1px solid var(--dorado);
+  color: var(--dorado);
+  text-decoration: none;
+  font-size: 14px;
+  letter-spacing: 2px;
+  transition: background-color .25s, color .25s;
+}
+
+.boton:hover {
+  background-color: var(--dorado);
+  color: var(--negro);
+}
+
+.marco {
+  flex: 0 1 330px;
+  padding: 14px;
+  border: 1px solid rgba(201, 165, 76, 0.6);
+}
+
+.marco img {
+  display: block;
+  width: 100%;
+}
+
+/* cifras */
+.cifras {
+  max-width: 1100px;
+  margin: 0 auto;
+  padding: 20px 24px 70px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 30px;
+  text-align: center;
+}
+
+.cifra {
+  flex: 1 1 180px;
+  border-top: 1px solid #2A2A2C;
+  padding-top: 22px;
+}
+
+.numero {
+  margin: 0;
+  font-family: var(--serif);
+  font-size: 48px;
+  color: var(--dorado);
+}
+
+.texto-cifra {
+  margin: 6px 0 0;
+  font-size: 14px;
+  color: var(--gris-oscuro);
+}
+
+/* biografia */
+.biografia {
+  background-image: linear-gradient(90deg, rgba(11, 11, 12, 0.97) 0%, rgba(11, 11, 12, 0.9) 55%, rgba(11, 11, 12, 0.4) 100%), url("img/balon-de-oro.jpg");
+  background-size: cover;
+  background-position: right center;
+  background-attachment: fixed;
+  padding: 110px 24px;
+}
+
+.bio-texto {
+  max-width: 600px;
+}
+
+.biografia h2,
+.titulo-centro h2 {
+  margin: 14px 0 30px;
+  font-size: 46px;
+  color: var(--blanco);
+}
+
+.bio-texto p {
+  font-size: 17px;
+  line-height: 1.8;
+  margin: 0 0 18px;
+  color: var(--texto);
+}
+
+.bio-texto .etiqueta {
+  font-size: 13px;
+  line-height: normal;
+  margin: 0;
+  color: var(--dorado);
+}
+
+.bio-texto .ultimo {
+  margin-bottom: 40px;
+}
+
+.bio-texto h3 {
+  margin: 0 0 14px;
+  font-size: 24px;
+  color: var(--dorado);
+}
+
+.datos {
+  margin: 0 0 40px;
+  padding-left: 20px;
+  font-size: 16px;
+  line-height: 2;
+  color: var(--texto);
+}
+
+.logros {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 15px;
+  color: var(--texto);
+}
+
+.logros td {
+  padding: 14px 0;
+  border-top: 1px solid var(--linea);
+}
+
+.logros tr:last-child td {
+  border-bottom: 1px solid var(--linea);
+}
+
+.logros .anio {
+  width: 120px;
+  color: var(--dorado);
+}
+
+/* trayectoria */
+.trayectoria {
+  position: relative;
+  overflow: hidden;
+  padding: 110px 24px;
+}
+
+.titulo-centro {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.titulo-centro h2 {
+  margin-bottom: 0;
+}
+
+.tarjetas {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 28px;
+  justify-content: center;
+}
+
+.tarjeta {
+  flex: 1 1 300px;
+  max-width: 340px;
+  background-color: var(--tarjeta);
+  border: 1px solid #2A2A2C;
+  transition: border-color .25s;
+}
+
+.tarjeta:hover {
+  border-color: var(--dorado);
+}
+
+.tarjeta img {
+  display: block;
+  width: 100%;
+  height: 240px;
+  object-fit: cover;
+  object-position: center top;
+}
+
+.tarjeta .foto-arriba {
+  object-position: center 20%;
+}
+
+.tarjeta-texto {
+  padding: 26px;
+}
+
+.fecha {
+  margin: 0;
+  font-size: 13px;
+  letter-spacing: 1px;
+  color: var(--dorado);
+}
+
+.tarjeta h3 {
+  margin: 8px 0 12px;
+  font-size: 24px;
+  color: var(--blanco);
+}
+
+.tarjeta-texto p:not(.fecha) {
+  margin: 0 0 18px;
+  font-size: 15px;
+  line-height: 1.7;
+  color: var(--gris);
+}
+
+.tarjeta a {
+  color: var(--dorado);
+  font-size: 14px;
+  text-decoration: none;
+  border-bottom: 1px solid var(--dorado);
+  padding-bottom: 2px;
+}
+
+/* favoritos */
+.favoritos {
+  background-image: linear-gradient(rgba(11, 11, 12, 0.9), rgba(11, 11, 12, 0.95)), url("img/final-champions-2018.jpg");
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  padding: 110px 24px;
+}
+
+.lista-favoritos {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.lista-favoritos li {
+  display: flex;
+  gap: 32px;
+  align-items: baseline;
+  padding: 32px 0;
+  border-top: 1px solid var(--linea);
+}
+
+.lista-favoritos li:last-child {
+  border-bottom: 1px solid var(--linea);
+}
+
+.romano {
+  min-width: 50px;
+  font-family: var(--serif);
+  font-size: 44px;
+  color: var(--dorado);
+}
+
+.lista-favoritos h3 {
+  margin: 0 0 8px;
+  font-size: 26px;
+  color: var(--blanco);
+}
+
+.lista-favoritos p {
+  margin: 0;
+  font-size: 16px;
+  line-height: 1.7;
+  color: var(--gris);
+}
+
+/* pie */
+.pie {
+  text-align: center;
+  padding: 36px 24px;
+  font-size: 13px;
+  line-height: 1.8;
+  color: #7D786E;
+  border-top: 1px solid rgba(201, 165, 76, 0.35);
+}
+
+.pie p {
+  margin: 0;
+}
+
+.pie a {
+  color: var(--dorado);
+  text-decoration: none;
+}
+
+.pie .volver {
+  color: #EDEAE3;
+}
+
+/* celular */
+@media (max-width: 700px) {
+  .menu-sitio a,
+  .menu-pagina a {
+    margin: 0 6px;
+  }
+
+  .portada {
+    padding: 60px 20px;
+  }
+
+  .portada h1 {
+    font-size: 48px;
+  }
+
+  .marco {
+    margin: 0 auto;
+  }
+
+  .biografia,
+  .trayectoria,
+  .favoritos {
+    padding: 80px 20px;
+  }
+
+  .biografia h2,
+  .titulo-centro h2 {
+    font-size: 34px;
+  }
+
+  .biografia,
+  .favoritos {
+    background-attachment: scroll;
+  }
+
+  .lista-favoritos li {
+    gap: 18px;
+  }
+}

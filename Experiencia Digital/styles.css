@@ -1,0 +1,298 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+/* para que se vea alejado */
+html { zoom: 0.73; }
+
+body {
+  background: #000000;
+  color: #fff;
+  font-family: "Helvetica Neue", Arial, sans-serif;
+}
+
+img { display: block; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+  cursor: default;
+}
+
+/* menu */
+.sidebar {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 320px;
+  height: 137vh;
+  padding: 24px 16px 0 22px;
+  overflow: hidden;
+}
+
+.logo-fila {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0 0 14px 8px;
+}
+
+.logo { height: 50px; }
+
+.cuadro {
+  width: 22px;
+  height: 22px;
+  border: 2px solid #555;
+  border-radius: 4px;
+  margin-right: 14px;
+}
+
+.buscar {
+  position: relative;
+  background: #2f2f2f;
+  color: #8a8a8a;
+  border-radius: 30px;
+  padding: 16px 20px 16px 54px;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.buscar::before {
+  content: "";
+  position: absolute;
+  left: 18px;
+  top: 17px;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #aaa;
+  border-radius: 50%;
+}
+
+.menu, .cuentas { list-style: none; }
+
+.menu li, .menu li a {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+}
+
+.menu li {
+  height: 60px;
+  font-size: 21px;
+  font-weight: 600;
+  padding-left: 8px;
+}
+
+.menu li img {
+  width: 40px;
+  height: 40px;
+  object-fit: contain;
+}
+
+.menu .ancho { width: 52px; margin: 0 -8px 0 -4px; }
+.redondo { border-radius: 50%; }
+.activo { color: #fe2c55; }
+
+hr {
+  border: none;
+  border-top: 1px solid #2a2a2a;
+  margin: 18px 10px 22px;
+}
+
+.subtitulo {
+  color: #ccc;
+  font-size: 18px;
+  font-weight: 600;
+  margin: 0 0 16px 10px;
+}
+
+.cuentas li {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  height: 63px;
+  padding-left: 10px;
+}
+
+.cuentas li > img {
+  width: 42px;
+  height: 42px;
+  border-radius: 50%;
+}
+
+.cuentas b {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 19px;
+  font-weight: 500;
+}
+
+.cuentas span { color: #8a8a8a; font-size: 16px; }
+
+.check { width: 20px; height: 20px; }
+
+/* video */
+.contenido {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  gap: 22px;
+  height: 137vh;
+  padding: 30px 360px 20px 350px;
+}
+
+.video {
+  height: 100%;
+  border-radius: 16px;
+}
+
+.acciones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  width: 70px;
+}
+
+.creador { width: 66px; margin-bottom: 12px; }
+
+.acciones div {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+}
+
+.acciones div img { width: 68px; }
+
+.acciones span {
+  font-size: 16px;
+  font-weight: 700;
+  color: #ddd;
+}
+
+.top-derecha {
+  position: fixed;
+  top: 32px;
+  right: 34px;
+  display: flex;
+  align-items: center;
+  gap: 32px;
+  background: #1f1f1f;
+  border-radius: 34px;
+  padding: 8px 8px 8px 22px;
+  font-size: 19px;
+  font-weight: 600;
+}
+
+.top-derecha span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.top-derecha span img { width: 24px; }
+
+.avatar-top {
+  width: 48px;
+  height: 48px;
+  border-radius: 50%;
+}
+
+.flechas {
+  position: fixed;
+  right: 20px;
+  top: 50%;
+  transform: translateY(-25%);
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+}
+
+.flechas img { width: 58px; border-radius: 50%; }
+
+/* visualizacion */
+.galeria {
+  margin-left: 370px;
+  width: 1302px;
+  padding-top: 26px;
+}
+
+.pestanas {
+  display: flex;
+  border-bottom: 2px solid #2a2a2a;
+  margin-bottom: 32px;
+}
+
+.pestanas > * {
+  width: 164px;
+  text-align: center;
+  padding: 12px 0 14px;
+  font-size: 21px;
+  font-weight: 500;
+  color: #aaa;
+}
+
+.pestanas .activa {
+  color: #fff;
+  font-weight: 600;
+  border-bottom: 3px solid #fff;
+  margin-bottom: -2px;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 309px);
+  gap: 38px 22px;
+}
+
+.miniatura {
+  width: 309px;
+  height: 410px;
+  border-radius: 8px;
+}
+
+.titulo {
+  font-size: 19px;
+  margin: 10px 3px 8px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.titulo b { color: #5fa8ff; font-weight: 500; }
+
+.autor {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 0 3px;
+}
+
+.autor > img {
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+}
+
+.autor span {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 19px;
+}
+
+.autor small {
+  margin-left: auto;
+  font-size: 16px;
+  color: #8a8a8a;
+}
+
+.iconos-top {
+  position: fixed;
+  top: 32px;
+  right: 34px;
+  width: 175px;
+}
